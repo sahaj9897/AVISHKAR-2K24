@@ -1,8 +1,17 @@
 import React from 'react'
 
 const HomePage = () => {
+  function DoctorRegistration(){
+
+  }
+  function PatientRegistration(){
+
+  }
   return (
-    <div>HomePage</div>
+    <>
+    <div>Home
+    </div>
+    </>
   )
 }
 
