@@ -8,12 +8,13 @@ import userRoutes from '../routes/userRoutes.js';
 dotenv.config();
 
 const app = express();
-
+app.use('/api/v1/user', userRoutes);
 app.use(express.json());
 app.use(morgan('dev'));
 connectDB();
 
-app.use("/api/v1/user", userRoutes);
+
+
 
 const port = process.env.PORT || 5173; 
 app.listen(port, () => {

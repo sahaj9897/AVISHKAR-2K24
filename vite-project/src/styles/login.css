@@ -1,0 +1,40 @@
+/* login.css */
+
+.FormContainer {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .FormContainer form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .FormContainer form label {
+    margin-bottom: 8px;
+  }
+  
+  .FormContainer form input {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .FormContainer form .ant-btn-primary {
+    width: 100%;
+  }
+  
+  .FormContainer p {
+    margin-top: 16px;
+    text-align: center;
+  }
+  
+  .FormContainer p a {
+    color: #1890ff;
+  }
+  
