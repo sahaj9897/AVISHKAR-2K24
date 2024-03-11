@@ -1,16 +1,23 @@
 import React from 'react';
-import { Form, Input, Button } from 'antd';
-import '../styles/RegisterPatient.css';
-import { Link } from 'react-router-dom';
-import { Userschema } from '../server/validator';
+import { Form, Input, Button,message} from 'antd';
+import { Link,useNavigate} from 'react-router-dom';
+import axios from 'axios'
+const Register = () => {
 
-const RegisterPatient = () => {
+  const navigate=useNavigate()
   const onFinishHandler = async (values) => {
     try {
-      await Userschema.parse(values);
-      console.log('Form values:', values);
-    } catch (error) {
-      console.error('Validation error:', error.errors);
+      const res=await axios.post('/api/v1/user/register',values)
+      if(res.data.success){
+        message.success("Register Succesfully!")
+        navigate('/login')
+      }
+      else{
+        message.error(res.data.message)
+      }
+    }
+   catch (error) {
+      message.error("Something Went Wrong")
     }
   };
 
@@ -29,10 +36,10 @@ const RegisterPatient = () => {
         <Form.Item>
           <Button type='primary' htmlType='submit'>Register</Button>
         </Form.Item>
-        <p>Already a user? <Link to="/RegisterPatient">Register here</Link></p>
+        <p>Already a user? <Link to="/login">Register here</Link></p>
       </Form>
     </div>
   );
 };
 
-export default RegisterPatient;
+export default Register;

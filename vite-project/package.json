@@ -1,5 +1,6 @@
 {
   "name": "vite-project",
+  "proxy": "http://localhost:5173/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,11 +9,13 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "server": "node src/server/server.cjs",
+    "server": "node src/server/server.js",
     "start": "concurrently \"npm run dev\" \"npm run server\""
   },
   "dependencies": {
     "antd": "^5.15.1",
+    "axios": "^1.6.7",
+    "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
     "concurrently": "^8.2.2",
     "dotenv": "^16.4.5",
