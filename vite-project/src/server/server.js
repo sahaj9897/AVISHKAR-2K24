@@ -8,15 +8,19 @@ import userRoutes from '../routes/userRoutes.js';
 dotenv.config();
 
 const app = express();
-app.use('/api/v1/user', userRoutes);
+
 app.use(express.json());
+
 app.use(morgan('dev'));
+
 connectDB();
 
+app.use('/api/v1/user', userRoutes);
 
-
-
+// Define the port
 const port = process.env.PORT || 5173; 
+
+// Start the server
 app.listen(port, () => {
     console.log(`Server Running in ${process.env.DEV_MODE} port=${process.env.PORT}`.bgCyan.white); 
 });
