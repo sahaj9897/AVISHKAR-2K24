@@ -1,40 +1,55 @@
-/* login.css */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-size: cover;
+  background-image: linear-gradient(to right, #6a3093, #a044ff);
+  font-family: 'Poppins', sans-serif;
+}
 
 .FormContainer {
-    width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-  }
-  
-  .FormContainer form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .FormContainer form label {
-    margin-bottom: 8px;
-  }
-  
-  .FormContainer form input {
-    padding: 10px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .FormContainer form .ant-btn-primary {
-    width: 100%;
-  }
-  
-  .FormContainer p {
-    margin-top: 16px;
-    text-align: center;
-  }
-  
-  .FormContainer p a {
-    color: #1890ff;
-  }
-  
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  width: 400px;
+  max-width: 100%;
+  padding: 40px;
+}
+
+.FormContainer h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.FormContainer form {
+  display: flex;
+  flex-direction: column;
+}
+
+.FormContainer form label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.FormContainer form input {
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.FormContainer form button {
+  padding: 10px;
+  border: none;
+  background-color: #6a3093;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.FormContainer form button:hover {
+  background-color: #a044ff;
+}
